@@ -85,6 +85,10 @@
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
+      "Id": "/home/charles.mattos@db1.com.br/Charles/C#/AspNetMvc/SalesWebMvc/wwwroot/lib/bootstrap/dist/css/bootstrap-slate.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-slate.css"
+    },
+    {
       "Id": "/home/charles.mattos@db1.com.br/Charles/C#/AspNetMvc/SalesWebMvc/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
       "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },

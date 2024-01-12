@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "7gMRgRuPApysKV6Jl6Zp9I/6SkrqwZ2XVxEfIJAT6iE=",
+  "Hash": "YLUpUJf2X6ItuspynK1iKEwHy3Ut9es/V9phoza48SM=",
   "Source": "SalesWebMvc",
   "BasePath": "_content/SalesWebMvc",
   "Mode": "Default",
@@ -414,6 +414,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Identity": "/home/charles.mattos@db1.com.br/Charles/C#/AspNetMvc/SalesWebMvc/wwwroot/lib/bootstrap/dist/css/bootstrap-slate.css",
+      "SourceId": "SalesWebMvc",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/charles.mattos@db1.com.br/Charles/C#/AspNetMvc/SalesWebMvc/wwwroot/",
+      "BasePath": "_content/SalesWebMvc",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-slate.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/bootstrap/dist/css/bootstrap-slate.css"
     },
     {
       "Identity": "/home/charles.mattos@db1.com.br/Charles/C#/AspNetMvc/SalesWebMvc/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",

@@ -13,14 +13,7 @@ namespace SalesWebMvc.Controllers
 {
     public class SellersController : Controller
     {
-        private readonly ContextConfig _context;
-       
         private readonly SellerService _sellerService;
-
-        public SellersController(ContextConfig context)
-        {
-            _context = context;
-        }        
 
         public SellersController(SellerService sellerService) {
             _sellerService = sellerService;

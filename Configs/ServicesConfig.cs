@@ -1,3 +1,4 @@
+using SalesWebMvc.Models;
 using SalesWebMvc.Services;
 
 namespace SalesWebMvc.Configs
@@ -7,6 +8,7 @@ namespace SalesWebMvc.Configs
         public static void AddDomainServices(this IServiceCollection services)
         {
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
         }
     }
 }

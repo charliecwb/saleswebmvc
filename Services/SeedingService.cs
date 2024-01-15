@@ -8,15 +8,8 @@ using SalesWebMvc.Models.Enums;
 
 namespace SalesWebMvc.Services
 {
-    public class SeedingService
+    public class SeedingService(ContextConfig _context)
     {
-        private ContextConfig _context;
-
-        public SeedingService(ContextConfig context) 
-        {
-            _context = context;
-        }
-
         public void Seed() 
         {
             if (_context.Department.Any() || _context.Seller.Any() || _context.SalesRecord.Any())

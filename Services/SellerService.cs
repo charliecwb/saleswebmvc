@@ -7,20 +7,23 @@ using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Services
 {
-    public class SellerService
+    public class SellerService(ContextConfig _context)
     {
-        private readonly ContextConfig _context;
-
-        public SellerService(ContextConfig context) {
-            _context = context;
-        }
-
         public List<Seller> FindAll() {
             return _context.Seller.ToList();
         }
 
         public void Insert(Seller seller) {
             _context.Add(seller);
+            _context.SaveChanges();
+        }
+
+        public Seller Find(int id) {
+            return _context.Seller.FirstOrDefault(obj => obj.Id == id);
+        }
+
+        public void Remove(int id) {
+            _context.Seller.Remove(Find(id));
             _context.SaveChanges();
         }
     }

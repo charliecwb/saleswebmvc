@@ -1,4 +1,4 @@
-@model SalesWebMvc.Models.Department
+@model SalesWebMvc.Models.Seller
 
 @{
     ViewData["Title"] = "Delete";
@@ -17,11 +17,23 @@
         <dd>
             @Html.DisplayFor(model => model.Name)
         </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>        
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>        
     </dl>
     
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <input type="submit" value="Delete" class="btn btn-danger"/> |
         <a asp-action="Index">Back to List</a>
     </form>
 </div>

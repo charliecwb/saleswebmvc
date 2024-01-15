@@ -5,15 +5,8 @@ using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Controllers
 {
-    public class DepartmentsController : Controller
+    public class DepartmentsController(ContextConfig _context): Controller
     {
-        private readonly ContextConfig _context;
-
-        public DepartmentsController(ContextConfig context)
-        {
-            _context = context;
-        }
-
         // GET: Departments
         public async Task<IActionResult> Index()
         {

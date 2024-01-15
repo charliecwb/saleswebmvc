@@ -10,6 +10,7 @@ namespace SalesWebMvc.Configs
             services.AddScoped<SeedingService>();
             services.AddScoped<SellerService>();
             services.AddScoped<DepartmentService>();
+            services.AddScoped<SalesRecordsService>();
         }
     }
 }

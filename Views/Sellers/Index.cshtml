@@ -23,7 +23,10 @@
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Salary)
-            </th>                                    
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Department)
+            </th>            
             <th></th>
         </tr>
     </thead>
@@ -42,6 +45,9 @@
                 <td>
                     @Html.DisplayFor(x => item.Salary)
                 </td>
+                <td>
+                    @Html.DisplayFor(x => item.Department.Name)
+                </td>                
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a asp-action="Details" asp-route-id="@item.Id">Details</a> |

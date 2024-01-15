@@ -1,3 +1,5 @@
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 using SalesWebMvc.Configs;
 using SalesWebMvc.Services;
 
@@ -9,6 +11,7 @@ builder.Services.AddDatabase(builder.Configuration);
 builder.Services.AddDomainServices();
 
 var app = builder.Build();
+var enUS = new CultureInfo("en-US");
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -23,6 +26,11 @@ if (!app.Environment.IsDevelopment())
     }
 }
 
+app.UseRequestLocalization(new RequestLocalizationOptions{
+    DefaultRequestCulture = new RequestCulture(enUS),
+    SupportedCultures = new List<CultureInfo> { enUS},
+    SupportedUICultures = new List<CultureInfo> { enUS}
+});
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();

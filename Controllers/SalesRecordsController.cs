@@ -3,8 +3,10 @@ using SalesWebMvc.Services;
 
 namespace SalesWebMvc.Controllers
 {
-    public class SalesRecordsController(SalesRecordsService _salesRecordsService) : Controller
+    public class SalesRecordsController(SalesRecordsService salesRecordsService) : Controller
     {
+        private readonly SalesRecordsService _salesRecordsService = salesRecordsService;
+
         public IActionResult Index()
         {
             return View();

@@ -4,7 +4,7 @@ using SalesWebMvc.Models.ViewModels;
 
 namespace SalesWebMvc.Controllers;
 
-public class HomeController(ILogger<HomeController> logger) : Controller
+public class HomeController: Controller
 {
     public IActionResult Index()
     {

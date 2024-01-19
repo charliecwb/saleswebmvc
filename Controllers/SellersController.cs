@@ -7,8 +7,11 @@ using SalesWebMvc.Services.Exceptions;
 
 namespace SalesWebMvc.Controllers
 {
-    public class SellersController(SellerService _sellerService, DepartmentService _departmentService): Controller
+    public class SellersController(SellerService sellerService, DepartmentService departmentService): Controller
     {
+        private readonly SellerService _sellerService = sellerService;
+        private readonly DepartmentService _departmentService = departmentService;
+
         public async Task<IActionResult> Index()
         {
             var list = await _sellerService.FindAllAsync();

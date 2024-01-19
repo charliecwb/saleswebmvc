@@ -5,8 +5,10 @@ using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Controllers
 {
-    public class DepartmentsController(ContextConfig _context): Controller
+    public class DepartmentsController(ContextConfig context): Controller
     {
+        private readonly ContextConfig _context = context;
+        
         // GET: Departments
         public async Task<IActionResult> Index()
         {
@@ -37,9 +39,6 @@ namespace SalesWebMvc.Controllers
             return View();
         }
 
-        // POST: Departments/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Name")] Department department)
@@ -69,9 +68,6 @@ namespace SalesWebMvc.Controllers
             return View(department);
         }
 
-        // POST: Departments/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Name")] Department department)

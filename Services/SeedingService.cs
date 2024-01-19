@@ -1,15 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using SalesWebMvc.Configs;
 using SalesWebMvc.Models;
 using SalesWebMvc.Models.Enums;
 
 namespace SalesWebMvc.Services
 {
-    public class SeedingService(ContextConfig _context)
+    public class SeedingService(ContextConfig context)
     {
+        private readonly ContextConfig _context = context;
         public void Seed() 
         {
             if (_context.Department.Any() || _context.Seller.Any() || _context.SalesRecord.Any())

@@ -4,8 +4,9 @@ using SalesWebMvc.Models;
 
 namespace SalesWebMvc.Services
 {
-    public class SalesRecordsService(ContextConfig _context)
+    public class SalesRecordsService(ContextConfig context)
     {
+        private readonly ContextConfig _context = context;
         public async Task<List<SalesRecord>> FindByDateAsync(DateTime? minDate, DateTime? maxDate) {
             var result = from obj in _context.SalesRecord select obj;
             if (minDate.HasValue) {

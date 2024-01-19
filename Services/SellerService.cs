@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Configs;
 using SalesWebMvc.Models;
@@ -9,8 +5,9 @@ using SalesWebMvc.Services.Exceptions;
 
 namespace SalesWebMvc.Services
 {
-    public class SellerService(ContextConfig _context)
+    public class SellerService(ContextConfig context)
     {
+        private readonly ContextConfig _context = context;
         public async Task<List<Seller>> FindAllAsync() {
             return await _context.Seller.Include(obj => obj.Department).ToListAsync();
         }
